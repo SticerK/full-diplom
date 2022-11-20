@@ -1,0 +1,66 @@
+.main-screen {
+  //   background-image: url('https://get.wallhere.com/photo/atmosphere-Earth-planet-night-outer-space-atmosphere-of-earth-astronomical-object-phenomenon-sky-astronomy-space-universe-darkness-horizon-908213.jpg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-screen-title {
+  color: white;
+  font-size: 50px;
+  overflow: hidden;
+  letter-spacing: 1.5px;
+  padding: 0 20px;
+}
+
+.main-screen-title_1 {
+  font-size: 60px;
+  line-height: 1;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.main-screen-title_2 {
+  display: inline-block;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.main-screen-title_3 {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: inline-block;
+}
+.cover {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.main-screen-title-btn {
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(82, 254, 197);
+}
+
+.main-screen-title-btn:hover {
+  animation: main-screen-btn 1s ease infinite;
+}
+
+@keyframes main-screen-btn {
+  0% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

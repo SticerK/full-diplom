@@ -1,0 +1,51 @@
+.MySelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  width: 175px;
+  height: 40px;
+  font-size: 14px;
+  color: white;
+  background-color: transparent;
+  outline: 0;
+  padding: 0 10px;
+  position: relative;
+  cursor: pointer;
+  gap: 7px;
+}
+
+.MySelect p {
+  overflow: hidden;
+}
+
+.MySelect svg {
+  transition: color 0.3s ease;
+}
+
+.MySelect:hover svg {
+  color: rgb(82, 254, 197);
+}
+
+.MySelect-option-container {
+  top: 100%;
+  position: absolute;
+  left: -2px;
+  z-index: 2000;
+  width: 195px;
+  background-color: rgb(31, 31, 31);
+}
+
+.MySelect-option {
+  margin-left: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 5px;
+  transition: background 0.3s ease;
+}
+
+.MySelect-option:hover {
+  background-color: rgb(17, 17, 17);
+}

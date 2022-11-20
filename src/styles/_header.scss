@@ -1,0 +1,53 @@
+.header {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 70px;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.nav-link:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  background-color: white;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover.nav-link:after {
+  width: 100%;
+}
