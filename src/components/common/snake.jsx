@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 const Snake = () => {
   const snakeRef = useRef();
-  console.log(snakeRef);
+
   useEffect(() => {
     setTimeout(() => (snakeRef.current.style.opacity = 1), 2000);
     setTimeout(() => (snakeRef.current.children[0].style.opacity = 1), 2500);

@@ -4,4 +4,23 @@
   margin-bottom: 40px;
   display: flex;
   align-items: center;
+  gap: 40px;
+}
+
+.filter-input {
+  border: 0;
+  outline: 0;
+  background-color: rgb(153, 153, 153);
+  padding: 5px 10px;
+  height: 20px;
+  transition: background 0.3s ease;
+  color: black;
+}
+
+.filter-input:focus {
+  background-color: silver;
+}
+
+.filter-input::placeholder {
+  color: rgb(43, 43, 43);
 }
