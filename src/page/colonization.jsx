@@ -1,8 +1,8 @@
-import Section from './common/section';
-import Card from './common/card';
-import FullInfo from './common/fullInfo';
-import Snake from './common/snake';
-import Filter from './common/filter';
+import Section from '../components/common/section';
+import Card from '../components/common/card';
+import FullInfo from '../components/common/fullInfo';
+import Snake from '../components/common/snake';
+import Filter from '../components/common/filter';
 import { useEffect, useState } from 'react';
 
 const Colonization = ({ data, inputFilter, changeFilter, filteredCard }) => {

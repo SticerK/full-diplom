@@ -1,15 +1,25 @@
 import Header from './header/header';
 import { Switch, Route } from 'react-router-dom';
-import MainScreen from './mainScreen';
-import Flight from './flight';
-import Colonization from './colonization';
-import Data from '../data/data';
-import { useState } from 'react';
+import MainScreen from '../page/mainScreen';
+import Flight from '../page/flight';
+// import Colonization from './colonization';
+
+import { useEffect, useState } from 'react';
 import lodash from 'lodash';
 
 const MainPage = () => {
-  const [data, setData] = useState(Data);
+  const [data, setData] = useState({});
   const [filteredCard, setFilteredCard] = useState();
+  const [isLoader, setIsLoader] = useState(true);
+
+  useEffect(() => {
+    fetch('https://63823285281f14ffefa2b344.mockapi.io/items')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(...data);
+        setIsLoader(false);
+      });
+  }, []);
 
   const changeFilter = (value, pageData) => {
     setFilteredCard(
@@ -33,18 +43,18 @@ const MainPage = () => {
     <>
       <Header />
       <Switch>
-        <Route path={'/main'} component={MainScreen}></Route>
         <Route
           path={'/flight/:CardID?'}
           render={() => (
             <Flight
-              data={data.flight}
+              data={isLoader ? {} : data.flight}
               changeFilter={changeFilter}
               inputFilter={inputFilter}
               filteredCard={filteredCard}
+              isLoader={isLoader}
             />
           )}></Route>
-        <Route
+        {/* <Route
           path={'/colonization/:CardID?'}
           render={() => (
             <Colonization
@@ -53,7 +63,8 @@ const MainPage = () => {
               inputFilter={inputFilter}
               filteredCard={filteredCard}
             />
-          )}></Route>
+          )}></Route> */}
+        <Route path={'/'} component={MainScreen}></Route>
       </Switch>
     </>
   );

@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Navigation = React.memo(() => {
   const navigationLink = [
-    { link: 'Главная', path: '/main', id: '1' },
+    { link: 'Главная', path: '/', id: '1' },
     { link: 'Полет', path: '/flight', id: '2' },
     { link: 'Колонизация', path: '/colonization', id: '3' },
     { link: 'Новости', path: '/туцы', id: '4' },
