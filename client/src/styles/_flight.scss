@@ -1,0 +1,76 @@
+.flight-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 80px;
+  position: relative;
+  width: 100%;
+  background-color: rgb(31, 31, 31);
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  z-index: 1000;
+  margin: 30px;
+  border-bottom: 2px solid rgb(82, 254, 197);
+  padding: 20px 10px;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.altCard-img {
+  min-width: 40%;
+  max-width: 40%;
+  display: flex;
+  align-items: center;
+
+  .image-container {
+    position: relative;
+    min-width: 100%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      box-shadow: 0px 0px 15px 15px rgba(31, 31, 31, 1) inset;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.altCard-text {
+  margin-left: 30px;
+  color: white;
+}
+
+.altCard-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.altCard-descr {
+  text-indent: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.altAnimate {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.altCard-list {
+  list-style: decimal;
+}
